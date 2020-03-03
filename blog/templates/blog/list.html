@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h3>Posts {% if posts %}<small class="text-muted">({{ posts|length }} Post{{ posts|length|pluralize:"s" }})</small>{% endif %}</h3>
+  <hr>
+  {% if posts %}
+    <div class="card-columns">
+      {% for post in posts %}
+        {% include "blog/partials/card.html" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-primary" role="alert">No posts to display.</div>
+  {% endif %}
+{% endblock %}
