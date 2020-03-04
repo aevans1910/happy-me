@@ -22,4 +22,8 @@ urlpatterns = [
 
     # Posts app
     path('', include('blog.urls')),
+
+    path('account/', include('django.contrib.auth.urls')),
+
+    path('account/', include('account.urls')),
 ]
