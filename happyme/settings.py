@@ -25,7 +25,7 @@ SECRET_KEY = 'dd$(=jp*8nxktmzp7%=5s$ufxm3n#cim5l0ma(#5wifbdd%)!%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'polls-website.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -125,6 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Where to redirect during authentication
 LOGIN_REDIRECT_URL = "/"
