@@ -141,6 +141,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Need to override settings? Create a local_settings.py file
 # in this directory, and add settings there.
 try:
-    from makewiki.local_settings import *
+    from happyme.local_settings import *
 except ImportError:
     pass
